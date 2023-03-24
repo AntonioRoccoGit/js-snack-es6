@@ -39,65 +39,74 @@
 ////////////////////////////////////////////////////////
 ///////////////////////////SNAK 2///////////////////////
 
-/* 
-Snack2
+// const soccerTeams = [
+//     {
+//         name: "Napoli",
+//         point: 0,
+//         sufferdFoul: 0
+//     },
+//     {
+//         name: "Milan",
+//         point: 0,
+//         sufferdFoul: 0
+//     },
+//     {
+//         name: "Inter",
+//         point: 0,
+//         sufferdFoul: 0
+//     },
+//     {
+//         name: "Juventus",
+//         point: 0,
+//         sufferdFoul: 0
+//     },
+//     {
+//         name: "Sampdoria",
+//         point: 0,
+//         sufferdFoul: 0
+//     },
+// ];
 
-Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-Snack Bonus
-Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
-La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
-Usiamo i nuovi metodi degli array foreach o filter.
-*/
+// soccerTeams.forEach((team) => {
+//     team.point = getRndInteger(0, 90)
+//     team.sufferdFoul = getRndInteger(0, 40)
+// });
 
-const soccerTeams = [
-    {
-        name: "Napoli",
-        point: 0,
-        sufferdFoul: 0
-    },
-    {
-        name: "Milan",
-        point: 0,
-        sufferdFoul: 0
-    },
-    {
-        name: "Inter",
-        point: 0,
-        sufferdFoul: 0
-    },
-    {
-        name: "Juventus",
-        point: 0,
-        sufferdFoul: 0
-    },
-    {
-        name: "Sampdoria",
-        point: 0,
-        sufferdFoul: 0
-    },
-];
+// const teamNameAndFoul = [];
 
-soccerTeams.forEach((team) => {
-    team.point = getRndInteger(0, 90)
-    team.sufferdFoul = getRndInteger(0, 40)
-});
-
-const teamNameAndFoul = [];
-
-soccerTeams.forEach((team) => {
-    const {name, sufferdFoul} = team;
+// soccerTeams.forEach((team) => {
+//     const {name, sufferdFoul} = team;
     
-    const newObj = {name, sufferdFoul};
-    teamNameAndFoul.push(newObj);
-});
+//     const newObj = {name, sufferdFoul};
+//     teamNameAndFoul.push(newObj);
+// });
 
 
-console.log(teamNameAndFoul, soccerTeams);
+// console.log(teamNameAndFoul, soccerTeams);
 
 
-//////////////////////////////////
-// FUNCTION
+// //////////////////////////////////
+// // FUNCTION
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
+// function getRndInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) ) + min;
+//   }
+
+////////////////////////////////////////////////////////
+///////////////////////////SNAK 3///////////////////////
+
+const numbersArray = [23, 14, 6, 8, 10];
+
+const numbersArrayFunc = snackBonus(numbersArray, 1, 3);
+console.log(numbersArrayFunc);
+//dato un array 
+//prendere gli indici compresi tra A e B 
+//stampare nuovo array con soli gli indici indicati
+
+function snackBonus(array, a, b){
+    const newArrey = [];
+    for(let i = a; i <= b; i++){
+        newArrey.push(array[i]);
+    }
+    return newArrey;
+};
