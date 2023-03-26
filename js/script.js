@@ -104,19 +104,19 @@ console.log(numbersArrayFunc);
 //stampare nuovo array con soli gli indici indicati
 
 function snackBonus(array, a, b){
-    const newArrey = [];
+    const newArray = [];
     for(let i = a; i <= b; i++){
-        newArrey.push(array[i]);
+        newArray.push(array[i]);
     }
-    return newArrey;
+    return newArray;
 };
-
+//implemented the same function with a different method
 function snackBonus2 (array, a, b){
-    const newArrey = [];
+    const newArray = [];
     array.forEach((numb, index) => {
         if(index >= a && index <= b){
-            newArrey.push(numb);
+            newArray.push(numb);
         }
     });
-    return newArrey;
+    return newArray;
 };
