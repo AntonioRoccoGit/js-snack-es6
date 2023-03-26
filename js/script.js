@@ -97,7 +97,7 @@
 
 const numbersArray = [23, 14, 6, 8, 10];
 
-const numbersArrayFunc = snackBonus(numbersArray, 1, 3);
+const numbersArrayFunc = snackBonus2(numbersArray, 1, 3);
 console.log(numbersArrayFunc);
 //dato un array 
 //prendere gli indici compresi tra A e B 
@@ -108,5 +108,15 @@ function snackBonus(array, a, b){
     for(let i = a; i <= b; i++){
         newArrey.push(array[i]);
     }
+    return newArrey;
+};
+
+function snackBonus2 (array, a, b){
+    const newArrey = [];
+    array.forEach((numb, index) => {
+        if(index >= a && index <= b){
+            newArrey.push(numb);
+        }
+    });
     return newArrey;
 };
