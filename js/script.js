@@ -64,7 +64,7 @@ const soccerTeams = [
         name: "Sampdoria",
         point: 0,
         sufferdFoul: 0
-    },
+    }
 ];
 
 soccerTeams.forEach((team) => {
@@ -72,12 +72,14 @@ soccerTeams.forEach((team) => {
     team.sufferdFoul = getRndInteger(0, 40)
 });
 
+let teamNameAndFoul2 = [];
 const teamNameAndFoul = [];
+
+soccerTeams.map(({name, sufferdFoul}) => teamNameAndFoul2.push({name, sufferdFoul}));
 
 soccerTeams.forEach(({name, sufferdFoul}) =>  teamNameAndFoul.push({name, sufferdFoul}));
 
-
-console.log(teamNameAndFoul, soccerTeams);
+console.log(teamNameAndFoul, teamNameAndFoul2, soccerTeams);
 
 
 //////////////////////////////////
